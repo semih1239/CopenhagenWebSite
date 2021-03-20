@@ -24,13 +24,21 @@ a {
 #container {
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 
+/* ----- navbar----- */
+
 nav {
-    position: sticky;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
     display: flex;
     justify-content: space-around;
     background: rgba(0, 0, 0, 0.50);
+    z-index: 5;
 }
 
 nav .logo {
@@ -69,9 +77,30 @@ nav .right-side a:hover,
     color: goldenrod;
 }
 
+@media screen and (max-width:770px) {
+    #container {
+        margin-top: 0;
+    }
+
+    nav{
+        position: unset;
+        display: block;
+        text-align: center;
+    }
+    nav .logo{
+        justify-content: center;
+    }
+}
+
+/*-----home-----*/
+
 #home {
     margin: 0 50px 0 50px;
     color: goldenrod;
+}
+
+.main{
+    padding-top: 50px;
 }
 
 .main h1 {
@@ -123,14 +152,6 @@ nav .right-side a:hover,
 }
 
 @media screen and (max-width:770px) {
-    #container {
-        margin-top: 0;
-    }
-
-    nav {
-        display: block;
-        text-align: center;
-    }
 
     .logo {
         display: inline-block;
@@ -160,6 +181,8 @@ nav .right-side a:hover,
     }
 
 }
+
+/*-----places-----*/
 
 #places {
     width: 100%;
@@ -252,19 +275,14 @@ nav .right-side a:hover,
         flex-basis: 100%;
         margin: 20px 0;
     }
-
+    
 }
 
-
-
-
+/*-----aboutus-----*/
 
 #aboutus {
     height: 100%;
     background: white;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(img/bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .aboutus {
@@ -286,12 +304,18 @@ nav .right-side a:hover,
 .about .left{
     flex-basis: 48%;
 }
+.left img{
+    width: 80%;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 100px;
+}
 
 .line{
     display: flex;
-    border: 1px solid grey;
-    background: #efefef;
-    border-radius: 3px;
+    background-color: rgb(141, 133, 96,0.1);
+    border-radius: 10px;
+    margin-bottom: 8%;
 }
 
 .left-line{
@@ -302,8 +326,16 @@ nav .right-side a:hover,
 .left-line .fas{
     color: goldenrod;
     font-size: 40px;
-    padding: 15px;
-    border-right: 1px solid lightgrey;
+    padding: 17px;
+    border: 1px solid goldenrod;
+    border-radius: 10px;
+}
+.left-line .far{
+    color: goldenrod;
+    font-size: 40px;
+    padding: 17px 22px 17px 22px;
+    border: 1px solid goldenrod;
+    border-radius: 10px;
 }
 
 .right-line{
@@ -323,4 +355,122 @@ nav .right-side a:hover,
 
 .about .right{
     flex-basis: 48%;
+}
+
+@media screen and (max-width:1000px) {
+    .about {
+        display: block;
+    }
+    .line{
+        margin-top: 30px;
+    }
+}
+
+/*-----footer-----*/
+
+#footer{
+    height: 90%;
+    margin-top: 80px;
+    background-color: #efefef;
+    text-align: center;
+}
+
+.contact{
+    margin: 5% 10%;
+}
+
+
+.footer span h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    padding-top: 60px;
+}
+
+.footer span p{
+    padding-top: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    color: goldenrod;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+}
+
+.contact .left-side{
+    flex-basis: 48%;
+    text-align: left;
+}
+
+.contact .right-side{
+    flex-basis: 48%;
+    text-align: right;
+}
+
+.contact .left-side p, .right-side p{
+    padding: 10px 0;
+    letter-spacing: 0.2px;
+}
+
+.contact .left-side .far{
+    color: goldenrod;
+    padding-right: 10px;
+}
+
+.contact .right-side .fas{
+    color: goldenrod;
+    padding-left: 10px;
+}
+
+.social{
+    display: inline-block;
+    height: 30px;
+    text-align: center;
+}
+
+.social ul{
+    align-content: center;
+}
+
+.social li{
+    margin: 0 20px;
+}
+
+.social a .fab{
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    transition: 0.5s;
+}
+
+
+.social a .fab:hover{
+    border: 1px solid aqua;
+    border-radius: 25px;
+    color: aqua;
+}
+
+.footer small p{
+    margin-top: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+@media screen and (max-width:770px) {
+    .contact{
+        display: block;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .contact{
+        display: block;
+    }
+    #footer{
+        margin-top: 900px;
+    }
 }

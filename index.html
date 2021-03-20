@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <title>Copenhagen Tour</title>
 </head>
 
@@ -27,10 +28,10 @@
             </div>
             <div class="center">
                 <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">PLACES</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#places">PLACES</a></li>
+                    <li><a href="#aboutus">ABOUT US</a></li>
+                    <li><a href="#footer">CONTACT</a></li>
                 </ul>
             </div>
             <div class="right-side">
@@ -89,6 +90,12 @@
                 <h1>ABOUT US</h1>
                 <div class="about">
                     <div class="left">
+                        <div class="img">
+                            <img src="img/about1.jpg">
+                            <img src="img/about2.jpg">
+                        </div>
+                    </div>
+                    <div class="right">
                         <div class="line">
                             <div class="left-line">
                                 <i class="fas fa-archway"></i>
@@ -99,37 +106,94 @@
                                     free travel guide.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="right">
-
+                        <div class="line">
+                            <div class="left-line">
+                                <i class="far fa-building"></i>
+                            </div>
+                            <div class="right-line">
+                                <h2>Who Are We?</h2>
+                                <p>We are a volunteer group that intends to introduce everyone to the beauty of
+                                    Copenhagen and its surroundings.</p>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="left-line">
+                                <i class="fas fa-bus"></i>
+                            </div>
+                            <div class="right-line">
+                                <h2>What are our Experience?</h2>
+                                <p>
+                                    We have organized sightseeing tours many times. We had many friendships as a result
+                                    of these tours. You can ask all our members about our travel tours that we have
+                                    organized many times.</p>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="left-line">
+                                <i class="fas fa-thumbtack"></i>
+                            </div>
+                            <div class="right-line">
+                                <h2>Do You Want a Copenhagen Tour?</h2>
+                                <p>
+                                    Do you want a tour of Copenhagen? You can contact us.</p>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="left-line">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="right-line">
+                                <h2>Do You Want Contact With Us?</h2>
+                                <p>
+                                    If you want to communicate with us, you can reach us from the information below.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
+        <div id="footer">
+            <div class="footer">
+                <span>
+                    <h1>CONTACT</h1>
+                </span>
+                <span>
+                    <p>Visit Us Today</p>
+                </span>
+                <div class="contact">
+                    <div class="left-side">
+                        <h1>Opening Hours</h1>
+                        <p><i class="far fa-clock"></i> Monday to Friday - 9am to 9pm </p>
+                        <p><i class="far fa-clock"></i> Saturday and Sunday - 8am to 11pm </p>
+                    </div>
+                    <div class="right-side">
+                        <h1>Get in Touch</h1>
+                        <p>#30 abc Colony, abc City DK <i class="fas fa-map-marker-alt"></i> </p>
+                        <p>semihayyildiz23@hotmail.com <i class="fas fa-paper-plane"></i></p>
+                        <p>+45 12312312 <i class="fas fa-phone"></i></p>
+                    </div>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <small>
+                    <p>COPYRIGHT BY SEMIH</p>
+                </small>
+            </div>
+        </div>
     </div>
 
-
-
-
-
-    <!--<div class="img">
-        <img src="img/about1.jpg">
-        <img src="img/about2.jpg">
-    </div>-->
-
-
-
-
-
-
-
-
-
-
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+        });
+    </script>
 </body>
 
 </html>
